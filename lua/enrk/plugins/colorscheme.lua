@@ -18,4 +18,20 @@ return {
   --     vim.cmd.colorscheme 'gruvbox-material'
   --   end,
   -- },
+  {
+    'zenbones-theme/zenbones.nvim',
+    lazy = false,
+    priority = 1000,
+    dependencies = {
+      'rktjmp/lush.nvim',
+    },
+    config = function()
+      vim.opt.background = 'light'
+      vim.g.neobones = {
+        lightness = 'dim',
+        darkness = 'stark',
+      }
+      vim.cmd.colorscheme 'neobones'
+    end,
+  },
 }
