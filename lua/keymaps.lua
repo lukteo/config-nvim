@@ -108,7 +108,7 @@ vim.keymap.set('n', '<leader>ui', vim.show_pos, { desc = 'Inspect Pos' })
 vim.keymap.set('n', '<leader>uI', '<cmd>InspectTree<cr>', { desc = 'Inspect Tree' })
 
 -- Terminal Mappings
-vim.keymap.set('t', '<esc><esc>', '<c-\\><c-n>', { desc = 'Enter Normal Mode' })
+vim.keymap.set('t', ';t', '<c-\\><c-n>', { desc = 'Enter Normal Mode' })
 vim.keymap.set('t', '<C-h>', '<cmd>wincmd h<cr>', { desc = 'Go to Left Window' })
 vim.keymap.set('t', '<C-j>', '<cmd>wincmd j<cr>', { desc = 'Go to Lower Window' })
 vim.keymap.set('t', '<C-k>', '<cmd>wincmd k<cr>', { desc = 'Go to Upper Window' })
