@@ -1,9 +1,18 @@
 return {
   'stevearc/oil.nvim',
   opts = {},
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  dependencies = { 'nvim-tree/nvim-web-devicons', enabled = true },
   config = function()
     require('oil').setup {
+      columns = {
+        {
+          'icon',
+          -- "permissions",
+          -- "size",
+          -- "mtime",
+        },
+      },
+      cleanup_delay_ms = 2000,
       default_file_explorer = true,
       delete_to_trash = true,
       skip_confirm_for_simple_edits = true,
