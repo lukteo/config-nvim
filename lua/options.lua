@@ -1,10 +1,6 @@
--- [[ Setting options ]]
--- See `:help vim.opt`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
-
 -- Make line numbers default
 vim.opt.number = true
+
 -- Enable relative line numbers
 vim.opt.relativenumber = true
 
@@ -47,9 +43,6 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- Preview substitutions live, as you type
 vim.opt.inccommand = 'split'
 
--- Show which line your cursor is on
-vim.opt.cursorline = true
-
 -- Minimal number of screen lines to keep above and below the cursor
 vim.opt.scrolloff = 10
 
@@ -58,7 +51,7 @@ vim.opt.scrolloff = 10
 vim.opt.undodir = vim.fn.expand '~/.vim/undodir'
 vim.opt.undofile = true
 
--- Disable true color support
+-- Enable true color support
 vim.opt.termguicolors = true
 
 -- Set a larger history size
@@ -97,9 +90,6 @@ vim.opt.hidden = true
 vim.opt.autoread = true
 vim.cmd [[autocmd FocusGained,BufEnter * checktime]]
 
--- Configure status line
--- vim.opt.statusline = '%f %h%m%r%=%-14.(%l,%c%V%) %P'
-
 -- Set default fold method
 vim.opt.foldmethod = 'syntax'
 vim.opt.foldlevelstart = 99
@@ -111,9 +101,4 @@ vim.opt.completeopt = { 'menuone', 'noselect' }
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
--- Highlight trailing whitespaces
--- vim.cmd [[autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red]]
--- vim.cmd [[autocmd BufWinEnter * match ExtraWhitespace /\s\+$/]]
-
--- Save the configuration with Vim modeline
 -- vim: ts=4 sts=4 sw=4 et
