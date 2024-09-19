@@ -29,58 +29,33 @@ return {
   --     vim.cmd.colorscheme 'sonokai'
   --   end,
   -- },
+  -- {
+  --   'zenbones-theme/zenbones.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   dependencies = {
+  --     'rktjmp/lush.nvim',
+  --   },
+  --   config = function()
+  --     vim.opt.background = 'dark'
+  --     -- vim.g.zenwritten = {
+  --     --   lightness = 'dim',
+  --     --   darkness = 'stark',
+  --     -- }
+  --     vim.cmd.colorscheme 'zenwritten'
+  --   end,
+  -- },
   {
-    'zenbones-theme/zenbones.nvim',
+    'craftzdog/solarized-osaka.nvim',
     lazy = false,
     priority = 1000,
-    dependencies = {
-      'rktjmp/lush.nvim',
+    opts = {
+      transparent = true,
+      terminal_colors = true,
     },
     config = function()
-      vim.opt.background = 'dark'
-      -- vim.g.zenwritten = {
-      --   lightness = 'dim',
-      --   darkness = 'stark',
-      -- }
-      vim.cmd.colorscheme 'zenwritten'
+      vim.cmd.colorscheme 'solarized-osaka'
     end,
-  },
-  { -- Greeter
-    'nvimdev/dashboard-nvim',
-    event = 'VimEnter',
-    config = function()
-      require('dashboard').setup {
-        theme = 'hyper',
-        config = {
-          week_header = {
-            enable = true,
-          },
-          shortcut = {
-            {
-              desc = '󰱼 Search',
-              group = 'Label',
-              action = 'Telescope find_files',
-              key = 's',
-            },
-            {
-              desc = '  Explorer',
-              group = 'Label',
-              action = 'Oil',
-              key = 'e',
-            },
-            {
-              desc = '󰩈 Quit',
-              group = 'Label',
-              action = 'qa',
-              key = 'q',
-            },
-          },
-          mru = { limit = 10, cwd_only = true },
-          footer = {},
-        },
-      }
-    end,
-    dependencies = { { 'nvim-tree/nvim-web-devicons' } },
   },
   { -- Indent Indicator
     'lukas-reineke/indent-blankline.nvim',

@@ -256,7 +256,7 @@ return {
             return { 'isort', 'black' }
           end
         end,
-        go = { 'goimports', 'gofmt', 'goimports-reviser', 'golines' },
+        go = { 'goimports', 'gofumpt', 'goimports-reviser', 'golines' },
         typescript = { 'biome' },
         ['*'] = { 'codespell' },
         ['_'] = { 'trim_whitespace' },
@@ -270,6 +270,8 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        javascript = { 'biome' },
+        typescript = { 'biome' },
         go = { 'golangcilint' },
       }
 
