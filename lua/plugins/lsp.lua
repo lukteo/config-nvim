@@ -258,7 +258,8 @@ return {
           end
         end,
         go = { 'goimports', 'gofumpt', 'goimports-reviser', 'golines' },
-        typescript = { 'biome' },
+        typescriptreact = { 'biome-check' },
+        javascript = { 'biome-check' },
         ['*'] = { 'codespell' },
         ['_'] = { 'trim_whitespace' },
       },
@@ -271,8 +272,6 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
-        javascript = { 'biome' },
-        typescript = { 'biome' },
         go = { 'golangcilint' },
       }
 
