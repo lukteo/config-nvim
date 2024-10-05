@@ -1,11 +1,11 @@
 return {
-  -- {
-  --   'rebelot/kanagawa.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'kanagawa'
-  --   end,
-  -- },
+  {
+    'rebelot/kanagawa.nvim',
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'kanagawa-dragon'
+    end,
+  },
   -- {
   --   'sainnhe/gruvbox-material',
   --   lazy = false,
@@ -16,6 +16,14 @@ return {
   --     vim.g.gruvbox_material_background = 'hard'
   --     vim.g.gruvbox_material_enable_italic = true
   --     vim.cmd.colorscheme 'gruvbox-material'
+  --   end,
+  -- },
+  -- {
+  --   'projekt0n/github-nvim-theme',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'github_light_high_contrast'
   --   end,
   -- },
   -- {
@@ -45,18 +53,18 @@ return {
   --     vim.cmd.colorscheme 'zenwritten'
   --   end,
   -- },
-  {
-    'craftzdog/solarized-osaka.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = true,
-      terminal_colors = true,
-    },
-    config = function()
-      vim.cmd.colorscheme 'solarized-osaka'
-    end,
-  },
+  -- {
+  --   'craftzdog/solarized-osaka.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     transparent = true,
+  --     terminal_colors = true,
+  --   },
+  --   config = function()
+  --     vim.cmd.colorscheme 'solarized-osaka'
+  --   end,
+  -- },
   { -- Indent Indicator
     'lukas-reineke/indent-blankline.nvim',
     opts = {
@@ -173,6 +181,28 @@ return {
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+    end,
+  },
+  { -- Filename display
+    'b0o/incline.nvim',
+    event = 'BufReadPre',
+    priority = 1200,
+    config = function()
+      require('incline').setup {
+        window = { margin = { vertical = 0, horizontal = 1 } },
+        hide = {
+          cursorline = true,
+        },
+        render = function(props)
+          local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ':t')
+          if vim.bo[props.buf].modified then
+            filename = '[+] ' .. filename
+          end
+
+          local icon, color = require('nvim-web-devicons').get_icon_color(filename)
+          return { { icon, guifg = color }, { ' ' }, { filename } }
+        end,
+      }
     end,
   },
 }
