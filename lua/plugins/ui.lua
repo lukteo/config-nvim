@@ -1,11 +1,11 @@
 return {
-  {
-    'rebelot/kanagawa.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'kanagawa-dragon'
-    end,
-  },
+  -- {
+  --   'rebelot/kanagawa.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'kanagawa-dragon'
+  --   end,
+  -- },
   -- {
   --   'sainnhe/gruvbox-material',
   --   lazy = false,
@@ -65,6 +65,28 @@ return {
   --     vim.cmd.colorscheme 'solarized-osaka'
   --   end,
   -- },
+  {
+    'jesseleite/nvim-noirbuddy',
+    dependencies = {
+      { 'tjdevries/colorbuddy.nvim' },
+    },
+    lazy = false,
+    priority = 1000,
+    opts = {
+      -- All of your `setup(opts)` will go here
+      colors = {
+        primary = '#008080',
+        background = '#000000',
+        diagnostic_error = '#EC0034',
+        diagnostic_warning = '#ff7700',
+        diagnostic_info = '#d5d5d5',
+        diagnostic_hint = '#f5f5f5',
+        diff_add = '#f5f5f5',
+        diff_change = '#737373',
+        diff_delete = '#EC0034',
+      },
+    },
+  },
   { -- Indent Indicator
     'lukas-reineke/indent-blankline.nvim',
     opts = {
