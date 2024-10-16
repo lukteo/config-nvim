@@ -260,6 +260,8 @@ return {
         go = { 'goimports', 'gofumpt', 'goimports-reviser', 'golines' },
         typescriptreact = { 'biome-check' },
         javascript = { 'biome-check' },
+        cpp = { 'clang-format' },
+        cmake = { 'cmake_format' },
         ['*'] = { 'codespell' },
         ['_'] = { 'trim_whitespace' },
       },
