@@ -65,27 +65,43 @@ return {
   --     vim.cmd.colorscheme 'solarized-osaka'
   --   end,
   -- },
+  -- {
+  --   'jesseleite/nvim-noirbuddy',
+  --   dependencies = {
+  --     { 'tjdevries/colorbuddy.nvim' },
+  --   },
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     -- All of your `setup(opts)` will go here
+  --     colors = {
+  --       primary = '#008080',
+  --       background = '#000000',
+  --       diagnostic_error = '#EC0034',
+  --       diagnostic_warning = '#ff7700',
+  --       diagnostic_info = '#d5d5d5',
+  --       diagnostic_hint = '#f5f5f5',
+  --       diff_add = '#f5f5f5',
+  --       diff_change = '#737373',
+  --       diff_delete = '#EC0034',
+  --     },
+  --   },
+  -- },
   {
-    'jesseleite/nvim-noirbuddy',
-    dependencies = {
-      { 'tjdevries/colorbuddy.nvim' },
-    },
+    'aliqyan-21/darkvoid.nvim',
     lazy = false,
     priority = 1000,
-    opts = {
-      -- All of your `setup(opts)` will go here
-      colors = {
-        primary = '#008080',
-        background = '#000000',
-        diagnostic_error = '#EC0034',
-        diagnostic_warning = '#ff7700',
-        diagnostic_info = '#d5d5d5',
-        diagnostic_hint = '#f5f5f5',
-        diff_add = '#f5f5f5',
-        diff_change = '#737373',
-        diff_delete = '#EC0034',
-      },
-    },
+    config = function()
+      require('darkvoid').setup {
+        transparent = false,
+        glow = true,
+        colors = {
+          bg = '#000000',
+        },
+      }
+
+      vim.cmd.colorscheme 'darkvoid'
+    end,
   },
   { -- Indent Indicator
     'lukas-reineke/indent-blankline.nvim',
