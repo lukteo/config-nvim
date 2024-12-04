@@ -1,4 +1,16 @@
 return {
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    opts = {
+      transparent_background = true,
+    },
+    config = function(_, opts)
+      require('catppuccin').setup(opts)
+      vim.cmd.colorscheme 'catppuccin-mocha'
+    end,
+  },
   -- {
   --   'rebelot/kanagawa.nvim',
   --   priority = 1000,
@@ -87,22 +99,22 @@ return {
   --     },
   --   },
   -- },
-  {
-    'aliqyan-21/darkvoid.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require('darkvoid').setup {
-        transparent = false,
-        glow = true,
-        colors = {
-          bg = '#000000',
-        },
-      }
-
-      vim.cmd.colorscheme 'darkvoid'
-    end,
-  },
+  -- {
+  --   'aliqyan-21/darkvoid.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('darkvoid').setup {
+  --       transparent = false,
+  --       glow = true,
+  --       colors = {
+  --         bg = '#000000',
+  --       },
+  --     }
+  --
+  --     vim.cmd.colorscheme 'darkvoid'
+  --   end,
+  -- },
   { -- Indent Indicator
     'lukas-reineke/indent-blankline.nvim',
     opts = {
