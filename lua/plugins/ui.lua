@@ -1,16 +1,16 @@
 return {
-  {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
-    opts = {
-      transparent_background = true,
-    },
-    config = function(_, opts)
-      require('catppuccin').setup(opts)
-      vim.cmd.colorscheme 'catppuccin-mocha'
-    end,
-  },
+  -- {
+  --   'catppuccin/nvim',
+  --   name = 'catppuccin',
+  --   priority = 1000,
+  --   opts = {
+  --     transparent_background = true,
+  --   },
+  --   config = function(_, opts)
+  --     require('catppuccin').setup(opts)
+  --     vim.cmd.colorscheme 'catppuccin-mocha'
+  --   end,
+  -- },
   -- {
   --   'rebelot/kanagawa.nvim',
   --   priority = 1000,
@@ -18,18 +18,23 @@ return {
   --     vim.cmd.colorscheme 'kanagawa-dragon'
   --   end,
   -- },
-  -- {
-  --   'sainnhe/gruvbox-material',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     -- Optionally configure and load the colorscheme
-  --     -- directly inside the plugin declaration.
-  --     vim.g.gruvbox_material_background = 'hard'
-  --     vim.g.gruvbox_material_enable_italic = true
-  --     vim.cmd.colorscheme 'gruvbox-material'
-  --   end,
-  -- },
+  {
+    'sainnhe/gruvbox-material',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Optionally configure and load the colorscheme
+      -- directly inside the plugin declaration.
+      vim.opt.background = 'dark'
+      vim.g.gruvbox_material_background = 'hard'
+      vim.g.gruvbox_material_foreground = 'material'
+      vim.g.gruvbox_material_enable_italic = true
+      vim.g.gruvbox_material_enable_bold = true
+      vim.g.gruvbox_material_dim_inactive_windows = true
+      vim.g.gruvbox_material_ui_contrast = 'high'
+      vim.cmd.colorscheme 'gruvbox-material'
+    end,
+  },
   -- {
   --   'projekt0n/github-nvim-theme',
   --   lazy = false,
@@ -57,11 +62,11 @@ return {
   --     'rktjmp/lush.nvim',
   --   },
   --   config = function()
-  --     vim.opt.background = 'dark'
-  --     -- vim.g.zenwritten = {
-  --     --   lightness = 'dim',
-  --     --   darkness = 'stark',
-  --     -- }
+  --     vim.opt.background = 'light'
+  --     vim.g.zenwritten = {
+  --       lightness = 'bright',
+  --       darkness = 'stark',
+  --     }
   --     vim.cmd.colorscheme 'zenwritten'
   --   end,
   -- },
