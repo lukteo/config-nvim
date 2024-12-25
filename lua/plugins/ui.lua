@@ -18,23 +18,23 @@ return {
   --     vim.cmd.colorscheme 'kanagawa-dragon'
   --   end,
   -- },
-  {
-    'sainnhe/gruvbox-material',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.opt.background = 'dark'
-      vim.g.gruvbox_material_background = 'hard'
-      vim.g.gruvbox_material_foreground = 'material'
-      vim.g.gruvbox_material_enable_italic = true
-      vim.g.gruvbox_material_enable_bold = true
-      vim.g.gruvbox_material_dim_inactive_windows = true
-      vim.g.gruvbox_material_ui_contrast = 'high'
-      vim.cmd.colorscheme 'gruvbox-material'
-    end,
-  },
+  -- {
+  --   'sainnhe/gruvbox-material',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     -- Optionally configure and load the colorscheme
+  --     -- directly inside the plugin declaration.
+  --     vim.opt.background = 'dark'
+  --     vim.g.gruvbox_material_background = 'hard'
+  --     vim.g.gruvbox_material_foreground = 'material'
+  --     vim.g.gruvbox_material_enable_italic = true
+  --     vim.g.gruvbox_material_enable_bold = true
+  --     vim.g.gruvbox_material_dim_inactive_windows = true
+  --     vim.g.gruvbox_material_ui_contrast = 'high'
+  --     vim.cmd.colorscheme 'gruvbox-material'
+  --   end,
+  -- },
   -- {
   --   'projekt0n/github-nvim-theme',
   --   lazy = false,
@@ -70,18 +70,18 @@ return {
   --     vim.cmd.colorscheme 'zenwritten'
   --   end,
   -- },
-  -- {
-  --   'craftzdog/solarized-osaka.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {
-  --     transparent = true,
-  --     terminal_colors = true,
-  --   },
-  --   config = function()
-  --     vim.cmd.colorscheme 'solarized-osaka'
-  --   end,
-  -- },
+  {
+    'craftzdog/solarized-osaka.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      terminal_colors = true,
+    },
+    config = function()
+      vim.cmd.colorscheme 'solarized-osaka'
+    end,
+  },
   -- {
   --   'jesseleite/nvim-noirbuddy',
   --   dependencies = {
