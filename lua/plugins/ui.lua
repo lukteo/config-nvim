@@ -1,4 +1,21 @@
 return {
+  {
+    'wtfox/jellybeans.nvim',
+    priority = 1000,
+    config = function()
+      require('jellybeans').setup {
+        style = 'dark',
+        transparent = true,
+        italics = false,
+        flat_ui = true,
+        plugins = {
+          all = false,
+          auto = true,
+        },
+      }
+      vim.cmd.colorscheme 'jellybeans'
+    end,
+  },
   -- {
   --   'catppuccin/nvim',
   --   name = 'catppuccin',
@@ -33,91 +50,6 @@ return {
   --     vim.g.gruvbox_material_dim_inactive_windows = true
   --     vim.g.gruvbox_material_ui_contrast = 'high'
   --     vim.cmd.colorscheme 'gruvbox-material'
-  --   end,
-  -- },
-  -- {
-  --   'projekt0n/github-nvim-theme',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'github_light_high_contrast'
-  --   end,
-  -- },
-  -- {
-  --   'sainnhe/sonokai',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     -- Optionally configure and load the colorscheme
-  --     -- directly inside the plugin declaration.
-  --     vim.g.sonokai_enable_italic = true
-  --     vim.cmd.colorscheme 'sonokai'
-  --   end,
-  -- },
-  -- {
-  --   'zenbones-theme/zenbones.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   dependencies = {
-  --     'rktjmp/lush.nvim',
-  --   },
-  --   config = function()
-  --     vim.opt.background = 'light'
-  --     vim.g.zenwritten = {
-  --       lightness = 'bright',
-  --       darkness = 'stark',
-  --     }
-  --     vim.cmd.colorscheme 'zenwritten'
-  --   end,
-  -- },
-  {
-    'craftzdog/solarized-osaka.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = true,
-      terminal_colors = true,
-    },
-    config = function()
-      vim.cmd.colorscheme 'solarized-osaka'
-    end,
-  },
-  -- {
-  --   'jesseleite/nvim-noirbuddy',
-  --   dependencies = {
-  --     { 'tjdevries/colorbuddy.nvim' },
-  --   },
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {
-  --     -- All of your `setup(opts)` will go here
-  --     colors = {
-  --       primary = '#008080',
-  --       background = '#000000',
-  --       diagnostic_error = '#EC0034',
-  --       diagnostic_warning = '#ff7700',
-  --       diagnostic_info = '#d5d5d5',
-  --       diagnostic_hint = '#f5f5f5',
-  --       diff_add = '#f5f5f5',
-  --       diff_change = '#737373',
-  --       diff_delete = '#EC0034',
-  --     },
-  --   },
-  -- },
-  -- {
-  --   'aliqyan-21/darkvoid.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('darkvoid').setup {
-  --       transparent = false,
-  --       glow = true,
-  --       colors = {
-  --         bg = '#000000',
-  --       },
-  --     }
-  --
-  --     vim.cmd.colorscheme 'darkvoid'
   --   end,
   -- },
   { -- Indent Indicator
