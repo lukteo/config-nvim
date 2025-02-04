@@ -4,6 +4,7 @@ require('lazy').setup({
   require 'plugins.git',
   require 'plugins.lsp',
   require 'plugins.tools',
+  require 'plugins.snacks',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {

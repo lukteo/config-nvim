@@ -52,32 +52,6 @@ return {
   --     vim.cmd.colorscheme 'gruvbox-material'
   --   end,
   -- },
-  { -- Indent Indicator
-    'lukas-reineke/indent-blankline.nvim',
-    opts = {
-      indent = {
-        char = '▏',
-        tab_char = '▏',
-      },
-      scope = { show_start = false, show_end = false },
-      exclude = {
-        filetypes = {
-          'help',
-          'alpha',
-          'dashboard',
-          'neo-tree',
-          'Trouble',
-          'trouble',
-          'lazy',
-          'mason',
-          'notify',
-          'toggleterm',
-          'lazyterm',
-        },
-      },
-    },
-    main = 'ibl',
-  },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
