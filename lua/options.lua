@@ -69,7 +69,7 @@ vim.opt.laststatus = 2
 
 -- Highlight the current line number
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = 'number'
+vim.opt.cursorlineopt = 'both'
 
 -- Highlight search matches
 vim.opt.hlsearch = true
