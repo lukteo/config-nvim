@@ -1,19 +1,30 @@
 return {
+  -- {
+  --   'wtfox/jellybeans.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     require('jellybeans').setup {
+  --       style = 'dark',
+  --       transparent = true,
+  --       italics = false,
+  --       flat_ui = true,
+  --       plugins = {
+  --         all = false,
+  --         auto = true,
+  --       },
+  --     }
+  --     vim.cmd.colorscheme 'jellybeans'
+  --   end,
+  -- },
   {
-    'wtfox/jellybeans.nvim',
-    priority = 1000,
+    'bettervim/yugen.nvim',
+    opts = {
+      highlight_groups = {
+        ['@string'] = { fg = '#FFBE89' },
+      },
+    },
     config = function()
-      require('jellybeans').setup {
-        style = 'dark',
-        transparent = true,
-        italics = false,
-        flat_ui = true,
-        plugins = {
-          all = false,
-          auto = true,
-        },
-      }
-      vim.cmd.colorscheme 'jellybeans'
+      vim.cmd.colorscheme 'yugen'
     end,
   },
   -- {
