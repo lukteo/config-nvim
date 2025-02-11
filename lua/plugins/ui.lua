@@ -17,14 +17,33 @@ return {
   --   end,
   -- },
   {
-    'bettervim/yugen.nvim',
-    opts = {
-      highlight_groups = {
-        ['@string'] = { fg = '#FFBE89' },
-      },
-    },
+    'echasnovski/mini.base16',
+    version = '*',
     config = function()
-      vim.cmd.colorscheme 'yugen'
+      require('mini.base16').setup {
+        palette = {
+          base00 = '#000000', -- Black (Background)
+          base01 = '#000000', -- Black (Shadows, Low contrast UI)
+          base02 = '#004455', -- Dark Teal (UI Elements, Soft Text)
+          base03 = '#A0A0A0', -- White (Bright Highlights)
+          base04 = '#00AA00', -- Green (CGA Bright Green)
+          base05 = '#A0A0A0', -- Cyan (CGA Bright Cyan)
+          base06 = '#AA5500', -- Orange (Alternative highlight)
+          base07 = '#AAAAAA', -- Light Gray (Alternative UI text)
+          base08 = '#C00000', -- Red (CGA Bright Red, Errors)
+          base09 = '#A0A0A0', -- Magenta (CGA Bright Magenta, Special syntax)
+          base0A = '#008CFF', -- Yellow (CGA Bright Yellow, Warnings)
+          base0B = '#00AA00', -- Green (Comments, Success indicators)
+          base0C = '#39C5BB', -- Cyan (Types, Constants)
+          base0D = '#39C5BB', -- Blue (CGA Deep Blue, Keywords, Functions)
+          base0E = '#A0A0A0', -- Magenta (Preprocessor, Special functions)
+          base0F = '#555555', -- Dark Gray (Uncommon cases, Debug info)
+        },
+        use_cterm = true,
+        plugins = {
+          default = false,
+        },
+      }
     end,
   },
   -- {
