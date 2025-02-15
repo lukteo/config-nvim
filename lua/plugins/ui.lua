@@ -1,49 +1,19 @@
 return {
-  -- {
-  --   'wtfox/jellybeans.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     require('jellybeans').setup {
-  --       style = 'dark',
-  --       transparent = true,
-  --       italics = false,
-  --       flat_ui = true,
-  --       plugins = {
-  --         all = false,
-  --         auto = true,
-  --       },
-  --     }
-  --     vim.cmd.colorscheme 'jellybeans'
-  --   end,
-  -- },
   {
-    'echasnovski/mini.base16',
-    version = '*',
+    'wtfox/jellybeans.nvim',
+    priority = 1000,
     config = function()
-      require('mini.base16').setup {
-        palette = {
-          base00 = '#000000',
-          base01 = '#303438',
-          base02 = '#404448',
-          base03 = '#606468',
-          base04 = '#b0b4b8',
-          base05 = '#d0d4d8',
-          base06 = '#e0e4e8',
-          base07 = '#ffffff',
-          base08 = '#ff3d3d',
-          base09 = '#ffaa3d',
-          base0A = '#ffff3d',
-          base0B = '#aaff3d',
-          base0C = '#3daaff',
-          base0D = '#3dddaa',
-          base0E = '#d399ff',
-          base0F = '#ffaaaa',
-        },
-        use_cterm = true,
+      require('jellybeans').setup {
+        style = 'dark',
+        transparent = true,
+        italics = false,
+        flat_ui = true,
         plugins = {
-          default = false,
+          all = false,
+          auto = true,
         },
       }
+      vim.cmd.colorscheme 'jellybeans'
     end,
   },
   -- {

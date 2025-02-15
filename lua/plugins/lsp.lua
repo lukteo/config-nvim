@@ -219,8 +219,10 @@ return {
           end
         end,
         go = { 'goimports', 'gofumpt', 'goimports-reviser', 'golines' },
+        typescript = { 'biome-check' },
         typescriptreact = { 'biome-check' },
         javascript = { 'biome-check' },
+        json = { 'biome-check' },
         cpp = { 'clang-format' },
         cmake = { 'cmake_format' },
         ['*'] = { 'codespell' },
