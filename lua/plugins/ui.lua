@@ -1,57 +1,16 @@
 return {
   {
-    'wtfox/jellybeans.nvim',
+    'projekt0n/github-nvim-theme',
+    name = 'github-theme',
+    lazy = false,
     priority = 1000,
     config = function()
-      require('jellybeans').setup {
-        style = 'dark',
-        transparent = true,
-        italics = false,
-        flat_ui = true,
-        plugins = {
-          all = false,
-          auto = true,
-        },
-      }
-      vim.cmd.colorscheme 'jellybeans'
+      -- require('github-theme').setup {
+      --   -- ...
+      -- }
+      vim.cmd 'colorscheme github_light_tritanopia'
     end,
   },
-  -- {
-  --   'catppuccin/nvim',
-  --   name = 'catppuccin',
-  --   priority = 1000,
-  --   opts = {
-  --     transparent_background = true,
-  --   },
-  --   config = function(_, opts)
-  --     require('catppuccin').setup(opts)
-  --     vim.cmd.colorscheme 'catppuccin-mocha'
-  --   end,
-  -- },
-  -- {
-  --   'rebelot/kanagawa.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'kanagawa-dragon'
-  --   end,
-  -- },
-  -- {
-  --   'sainnhe/gruvbox-material',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     -- Optionally configure and load the colorscheme
-  --     -- directly inside the plugin declaration.
-  --     vim.opt.background = 'dark'
-  --     vim.g.gruvbox_material_background = 'hard'
-  --     vim.g.gruvbox_material_foreground = 'material'
-  --     vim.g.gruvbox_material_enable_italic = true
-  --     vim.g.gruvbox_material_enable_bold = true
-  --     vim.g.gruvbox_material_dim_inactive_windows = true
-  --     vim.g.gruvbox_material_ui_contrast = 'high'
-  --     vim.cmd.colorscheme 'gruvbox-material'
-  --   end,
-  -- },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
