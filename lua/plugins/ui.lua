@@ -13,7 +13,7 @@ return {
       require('noirbuddy').setup {
         colors = {
           background = '#000000',
-          primary = '#00FF80',
+          primary = '#00FF00',
           secondary = '#00AFFF',
         },
       }
