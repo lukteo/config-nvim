@@ -1,16 +1,36 @@
 return {
   {
-    'projekt0n/github-nvim-theme',
-    name = 'github-theme',
+    'jesseleite/nvim-noirbuddy',
+    dependencies = {
+      { 'tjdevries/colorbuddy.nvim' },
+    },
     lazy = false,
     priority = 1000,
+    opts = {
+      -- All of your `setup(opts)` will go here
+    },
     config = function()
-      -- require('github-theme').setup {
-      --   -- ...
-      -- }
-      vim.cmd 'colorscheme github_light_tritanopia'
+      require('noirbuddy').setup {
+        colors = {
+          background = '#000000',
+          primary = '#00FF80',
+          secondary = '#00AFFF',
+        },
+      }
     end,
   },
+  -- {
+  --   'projekt0n/github-nvim-theme',
+  --   name = 'github-theme',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('github-theme').setup {
+  --       options = { transparent = true, dim_inactive = true },
+  --     }
+  --     vim.cmd 'colorscheme github_dark_tritanopia'
+  --   end,
+  -- },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
