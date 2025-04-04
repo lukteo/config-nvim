@@ -8,6 +8,7 @@ return {
     priority = 1000,
     opts = {
       -- All of your `setup(opts)` will go here
+      install = { colorscheme = { 'noirbuddy' } },
     },
     config = function()
       require('noirbuddy').setup {
