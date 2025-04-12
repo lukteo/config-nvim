@@ -1,37 +1,34 @@
 return {
-  {
-    'jesseleite/nvim-noirbuddy',
-    dependencies = {
-      { 'tjdevries/colorbuddy.nvim' },
-    },
-    lazy = false,
-    priority = 1000,
-    opts = {
-      -- All of your `setup(opts)` will go here
-      install = { colorscheme = { 'noirbuddy' } },
-    },
-    config = function()
-      require('noirbuddy').setup {
-        colors = {
-          background = '#000000',
-          primary = '#00FF00',
-          secondary = '#00AFFF',
-        },
-      }
-    end,
-  },
   -- {
-  --   'projekt0n/github-nvim-theme',
-  --   name = 'github-theme',
+  --   'Mofiqul/vscode.nvim',
   --   lazy = false,
   --   priority = 1000,
   --   config = function()
-  --     require('github-theme').setup {
-  --       options = { transparent = true, dim_inactive = true },
+  --     vim.o.background = 'light'
+  --     require('vscode').setup {
+  --       transparent = false,
+  --       italic_comments = false,
+  --       underline_links = true,
+  --       terminal_colors = true,
   --     }
-  --     vim.cmd 'colorscheme github_dark_tritanopia'
+  --     vim.cmd.colorscheme 'vscode'
   --   end,
   -- },
+  {
+    'sainnhe/gruvbox-material',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.g.gruvbox_material_background = 'hard'
+      vim.g.gruvbox_material_foreground = 'mix'
+      vim.g.gruvbox_material_enable_italic = true
+      vim.g.gruvbox_material_enable_bold = true
+      vim.g.gruvbox_material_cursor = 'green'
+      vim.g.gruvbox_material_dim_inactive_windows = true
+      vim.g.gruvbox_material_ui_contrast = 'high'
+      vim.cmd.colorscheme 'gruvbox-material'
+    end,
+  },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
