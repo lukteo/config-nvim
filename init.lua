@@ -8,4 +8,6 @@ require 'keymaps'
 require 'bootstrap'
 require 'plugins'
 
+vim.cmd.colorscheme 'lunaperche'
+
 -- vim: ts=2 sts=2 sw=2 et
