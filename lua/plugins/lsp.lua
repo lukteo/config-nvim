@@ -51,6 +51,7 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
       local servers = {
+        markdownlint = {},
         vtsls = {},
         gopls = {},
         pyright = {
@@ -228,6 +229,7 @@ return {
         json = { 'biome-check' },
         cpp = { 'clang-format' },
         cmake = { 'cmake_format' },
+        markdown = { 'markdownlint' },
         ['*'] = { 'codespell' },
         ['_'] = { 'trim_whitespace' },
       },
