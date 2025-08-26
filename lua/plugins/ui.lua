@@ -35,60 +35,38 @@ return {
     config = function()
       require('mini.base16').setup {
         palette = {
-          -- light style
-          -- base00 = '#FAFAFA', -- Softer white background
-          -- base01 = '#F0F0F0', -- UI containers
-          -- base02 = '#E0E0E0', -- Selection background
-          -- base03 = '#A0A0A0', -- Comments (now actually readable)
-          -- base04 = '#555555', -- Line numbers, UI dim text
-          -- base05 = '#1A1A1A', -- Main text (good contrast)
-          -- base06 = '#FFB300', -- Functions (yellow-orange)
-          -- base07 = '#FF3B30', -- Constants (OZ red)
-          -- base08 = '#D32F2F', -- Errors
-          -- base09 = '#F57C00', -- Warnings (orange)
-          -- base0A = '#FBC02D', -- Yellow (mutable vars / highlights)
-          -- base0B = '#388E3C', -- Success (green)
-          -- base0C = '#00ACC1', -- Cyan (decorators, support)
-          -- base0D = '#1976D2', -- Keywords (primary blue)
-          -- base0E = '#9C27B0', -- Tags / purple things
-          -- base0F = '#D81B60', -- Deprecated / strong magenta
-          --
-
-          -- dark style
-          base00 = '#121212', -- Background
-          base01 = '#1E1E1E', -- Lighter background
-          base02 = '#2A2A2A', -- Selection background
-          base03 = '#555555', -- Comments, invisibles
-          base04 = '#AAAAAA', -- Line numbers, UI hints
-          base05 = '#E0E0E0', -- Default text
-          base06 = '#FFB300', -- Functions (OZ yellow-orange)
-          base07 = '#FF3B30', -- Constants / UI Red
-          base08 = '#FF5252', -- Errors / alerts
-          base09 = '#FF9100', -- Warnings
-          base0A = '#FFC107', -- Yellow accents
-          base0B = '#81C784', -- Success / green
-          base0C = '#00ACC1', -- Cyan (notifications)
-          base0D = '#64B5F6', -- Keywords / links (soft OZ blue)
-          base0E = '#BA68C8', -- Purple / special tags
-          base0F = '#FF4081', -- Deprecated / pink-red
-
-          -- darker style
-          -- base00 = '#000000', -- Pure black terminal background
-          -- base01 = '#121212', -- Slightly lighter
-          -- base02 = '#1C1C1C', -- Borders/selection
-          -- base03 = '#3C3C3C', -- Comments / inactive
-          -- base04 = '#7F7F7F', -- Line numbers
-          -- base05 = '#E0E0E0', -- Primary text
-          -- base06 = '#FFFA72', -- Functions / bright terminal yellow
-          -- base07 = '#FF355E', -- Constants / bright red
-          -- base08 = '#FF4444', -- Errors
-          -- base09 = '#FFA500', -- Warnings / orange
-          -- base0A = '#FFD700', -- Yellow highlights
-          -- base0B = '#00FF7F', -- Success / vivid green
-          -- base0C = '#00FFFF', -- Cyan (tech vibe)
-          -- base0D = '#00BFFF', -- Keywords / links (digital blue)
-          -- base0E = '#DA70D6', -- Tags / purples
-          -- base0F = '#FF1493', -- Deprecated / hot pink
+          -- base00 = '#000000', -- Background
+          -- base01 = '#1E1E1E', -- Lighter background
+          -- base02 = '#2A2A2A', -- Selection background
+          -- base03 = '#555555', -- Comments, invisibles
+          -- base04 = '#AAAAAA', -- Line numbers, UI hints
+          -- base05 = '#E0E0E0', -- Default text
+          -- base06 = '#FFB300', -- Functions (OZ yellow-orange)
+          -- base07 = '#FF3B30', -- Constants / UI Red
+          -- base08 = '#FF5252', -- Errors / alerts
+          -- base09 = '#FF9100', -- Warnings
+          -- base0A = '#FFC107', -- Yellow accents
+          -- base0B = '#81C784', -- Success / green
+          -- base0C = '#00ACC1', -- Cyan (notifications)
+          -- base0D = '#64B5F6', -- Keywords / links (soft OZ blue)
+          -- base0E = '#BA68C8', -- Purple / special tags
+          -- base0F = '#FF4081', -- Deprecated / pink-red
+          base00 = '#ffffff', -- white background
+          base01 = '#f0f0f0',
+          base02 = '#cccccc',
+          base03 = '#555555',
+          base04 = '#777777',
+          base05 = '#000000', -- black main text
+          base06 = '#222222',
+          base07 = '#000000',
+          base08 = '#cc0000', -- black accents instead of colorful accents
+          base09 = '#aa5500',
+          base0A = '#ff9900',
+          base0B = '#008800',
+          base0C = '#008888',
+          base0D = '#0000cc',
+          base0E = '#990099',
+          base0F = '#cc00cc',
         },
       }
     end,
