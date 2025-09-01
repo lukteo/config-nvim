@@ -51,22 +51,40 @@ return {
           -- base0D = '#64B5F6', -- Keywords / links (soft OZ blue)
           -- base0E = '#BA68C8', -- Purple / special tags
           -- base0F = '#FF4081', -- Deprecated / pink-red
-          base00 = '#ffffff', -- white background
-          base01 = '#f0f0f0',
-          base02 = '#cccccc',
-          base03 = '#555555',
-          base04 = '#777777',
-          base05 = '#000000', -- black main text
-          base06 = '#222222',
-          base07 = '#000000',
-          base08 = '#cc0000', -- black accents instead of colorful accents
-          base09 = '#aa5500',
-          base0A = '#ff9900',
-          base0B = '#008800',
-          base0C = '#008888',
-          base0D = '#0000cc',
-          base0E = '#990099',
-          base0F = '#cc00cc',
+
+          -- base00 = '#ffffff', -- white background
+          -- base01 = '#e0e0e0', -- slightly darker light gray for subtle shading
+          -- base02 = '#b0b0b0', -- medium light gray for borders or secondary backgrounds
+          -- base03 = '#555555', -- dark gray for less prominent text
+          -- base04 = '#777777', -- medium dark gray for UI elements
+          -- base05 = '#000000', -- black main text
+          -- base06 = '#222222', -- very dark gray for emphasis
+          -- base07 = '#000000', -- black
+          -- base08 = '#cc0000', -- dark red accents
+          -- base09 = '#aa5500', -- brown-orange accents
+          -- base0A = '#b8860b', -- dark goldenrod (updated yellow for better contrast)
+          -- base0B = '#008800', -- green accents
+          -- base0C = '#008888', -- teal accents
+          -- base0D = '#0000cc', -- blue accents
+          -- base0E = '#990099', -- purple accents
+          -- base0F = '#cc00cc', -- magenta accents (can be softened if desired)
+
+          base00 = '#000000', -- black background (true terminal black)
+          base01 = '#333333', -- dark charcoal, subtle background shading
+          base02 = '#555555', -- medium dark gray for borders/UI
+          base03 = '#888888', -- medium-light gray for less prominent text
+          base04 = '#bbbbbb', -- light gray for UI elements
+          base05 = '#eeeeee', -- off-white main text for softer contrast
+          base06 = '#dddddd', -- light gray emphasis text
+          base07 = '#ffffff', -- bright white for highlights
+          base08 = '#cc3300', -- muted dark red accents with retro warmth
+          base09 = '#cc7700', -- warm brown-orange accents
+          base0A = '#d8aa21', -- goldenrod yellow, brightened for contrast
+          base0B = '#339933', -- muted green accents
+          base0C = '#339999', -- muted teal accents
+          base0D = '#3366cc', -- classic retro blue accents
+          base0E = '#993399', -- deep purple accents
+          base0F = '#cc3399', -- magenta pink accents with softness
         },
       }
     end,
