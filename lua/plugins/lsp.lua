@@ -241,8 +241,21 @@ return {
     config = function()
       local lint = require 'lint'
       lint.linters_by_ft = {
-        markdown = { 'markdownlint' },
         go = { 'golangcilint' },
+        typescript = { 'biomejs' },
+        typescriptreact = { 'biomejs' },
+      }
+
+      local golangcilint = lint.linters.golangcilint
+      golangcilint.args = {
+        'run',
+        '--output.json.path=stdout',
+        '--show-stats=false',
+        '--output.text.print-issued-lines=false',
+        '--output.text.print-linter-name=false',
+        function()
+          return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ':h')
+        end,
       }
 
       -- Create autocommand which carries out the actual linting

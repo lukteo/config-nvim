@@ -101,4 +101,6 @@ vim.opt.completeopt = { 'menuone', 'noselect' }
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
+vim.opt.wrap = false
+
 -- vim: ts=4 sts=4 sw=4 et
