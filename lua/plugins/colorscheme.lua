@@ -12,13 +12,28 @@ return {
   --     require('bamboo').load()
   --   end,
   -- },
+  -- {
+  --   'protesilaos/tempus-themes-vim',
+  --   name = 'tempus_classic', -- You can name it anything, but this is descriptive
+  --   priority = 1000, -- ensures the colorscheme loads early
+  --   config = function()
+  --     -- Set the colorscheme after the plugin is loaded
+  --     vim.cmd.colorscheme 'tempus_classic'
+  --   end,
+  -- },
   {
-    'protesilaos/tempus-themes-vim',
-    name = 'tempus_classic', -- You can name it anything, but this is descriptive
-    priority = 1000, -- ensures the colorscheme loads early
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
     config = function()
-      -- Set the colorscheme after the plugin is loaded
-      vim.cmd.colorscheme 'tempus_classic'
+      require('catppuccin').setup {
+        flavour = 'mocha', -- latte, frappe, macchiato, mocha
+        term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
+        dim_inactive = {
+          enabled = true, -- dims the background color of inactive window
+        },
+      }
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
 }
