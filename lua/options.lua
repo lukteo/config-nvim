@@ -56,8 +56,8 @@ vim.opt.undodir = vim.fn.expand '~/.vim/undodir'
 vim.opt.undofile = true
 
 -- Enable true color support
-vim.opt.termguicolors = false
-vim.cmd.colorscheme 'vim'
+vim.opt.termguicolors = true
+-- vim.cmd.colorscheme 'vim'
 
 -- Set a larger history size
 vim.opt.history = 1000

@@ -36,4 +36,13 @@ return {
   --     vim.cmd.colorscheme 'catppuccin'
   --   end,
   -- },
+  {
+    'funnyVariable/blank.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.o.background = 'light'
+      vim.cmd 'colorscheme blank'
+    end,
+  },
 }
