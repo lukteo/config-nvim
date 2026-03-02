@@ -36,13 +36,38 @@ return {
   --     vim.cmd.colorscheme 'catppuccin'
   --   end,
   -- },
+  -- {
+  --   'funnyVariable/blank.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.o.background = 'light'
+  --     vim.cmd 'colorscheme blank'
+  --   end,
+  -- },
   {
-    'funnyVariable/blank.nvim',
-    lazy = false,
-    priority = 1000,
+    'rebelot/kanagawa.nvim',
     config = function()
-      vim.o.background = 'light'
-      vim.cmd 'colorscheme blank'
+      require('kanagawa').setup {
+        -- Here you can set various options
+        theme = 'wave', -- available themes: wave, dragon, lotus
+        -- other options, for example:
+        compile = true,
+        dimInactive = true,
+        colors = {
+          theme = {
+            all = {
+              ui = {
+                bg_gutter = 'none', -- disable background on the gutter
+              },
+            },
+          },
+        },
+        -- ... more options can be found on the plugin's [GitHub page](https://github.com/rebelot/kanagawa.nvim)
+      }
+
+      -- Load the colorscheme
+      vim.cmd 'colorscheme kanagawa'
     end,
   },
 }
