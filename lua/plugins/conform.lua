@@ -9,7 +9,8 @@ return {
       notify_no_formatters = false,
       formatters_by_ft = {
         c = { name = 'clangd', timeout_ms = 500, lsp_format = 'prefer' },
-        go = { name = 'gopls', timeout_ms = 500, lsp_format = 'prefer' },
+        -- go = { name = 'gofumpt', timeout_ms = 500, lsp_format = 'prefer' },
+        go = { 'gofumpt', 'goimports-reviser', 'golines' },
         javascript = { 'biome-check', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },
         javascriptreact = { 'biome-check', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },
         json = { 'biome-check', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },
@@ -18,7 +19,7 @@ return {
         sh = { 'shfmt' },
         typescript = { 'biome-check', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },
         typescriptreact = { 'biome-check', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },
-        yaml = { 'biome-check' },
+        yaml = { 'yamlfmt', 'yamlfix' },
         -- For filetypes without a formatter:
         ['_'] = { 'trim_whitespace', 'trim_newlines' },
       },
