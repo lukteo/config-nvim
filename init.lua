@@ -137,7 +137,6 @@ local function setup_lsp()
     end,
   })
 end
-vim.opt.rtp:prepend(lazypath)
 
 -- PLUGINS
 vim.pack.add({
