@@ -155,6 +155,9 @@ require('oil').setup {
   columns = { 'size', 'mtime' },
   delete_to_trash = true,
   skip_confirm_for_simple_edits = true,
+  view_options = {
+    show_hidden = true,
+  }
 }
 require('fzf-lua').setup {}
 require("conform").setup({
