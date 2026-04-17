@@ -43,6 +43,13 @@ o.relativenumber = true
 o.scrolloff = 10
 o.termguicolors = false
 o.cursorline = false
+o.clipboard = "unnamedplus"
+o.splitright = true
+o.splitbelow = true
+o.inccommand = "split"
+o.confirm = true
+o.updatetime = 250
+o.timeoutlen = 300
 
 -- GLOBAL CONFIG
 local g = vim.g
