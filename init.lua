@@ -26,8 +26,8 @@ o.list = true
 o.signcolumn = "yes"
 o.backspace = "indent,eol,start"
 o.shell = "/bin/zsh"
-o.colorcolumn = "100"
-o.completeopt = { "menu", "menuone", "fuzzy", "noinsert", "noselect", "popup" }
+o.completeopt = { "menu", "menuone", "noselect" }
+o.autocomplete = true
 o.wildmode = { "lastused", "full" }
 o.pumheight = 15
 o.laststatus = 0
@@ -128,6 +128,7 @@ local function setup_lsp()
     "zls",   -- os package mgr: zls
     "lua_ls",
     "vtsls",
+    "clangd",
   })
 
   autocmd("LspAttach", {
@@ -169,7 +170,8 @@ require('oil').setup {
 require('fzf-lua').setup {}
 require("conform").setup({
   formatters_by_ft = {
-    c = { name = 'clangd', timeout_ms = 500, lsp_format = 'prefer' },
+    c = { 'clang_format', timeout_ms = 500, lsp_format = 'prefer' },
+    cpp = { 'clang_format', timeout_ms = 500, lsp_format = 'prefer' },
     go = { 'gofumpt', 'goimports-reviser', 'golines' },
     javascript = { 'biome-check', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },
     javascriptreact = { 'biome-check', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },
